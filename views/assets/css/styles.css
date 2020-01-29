@@ -1,0 +1,200 @@
+@font-face {
+  font-family: "Gotham Light";
+  src: url("fonts/Gotham-Light copy.otf");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Gotham Medium";
+  src: url("fonts/GothamMedium Regular copy.otf");
+  font-weight: 600;
+}
+
+/**********
+* SITE WIDE *
+**********/
+body {
+  font-family: "Gotham Light";
+}
+
+.main-container {
+  min-height: calc(100vh - 173px);
+}
+
+.small-icons {
+  font-size: 16px;
+}
+
+p {
+  font-family: "Gotham Light";
+  font-weight: 400;
+  font-size: 14px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Gotham Medium";
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+a {
+  font-family: "Gotham Light";
+  font-weight: 400;
+  text-decoration: none;
+}
+
+.addpointer {
+  cursor: pointer;
+}
+
+.med-img {
+  max-width: 400px;
+}
+
+/**********
+* NAV BAR *
+**********/
+.logo-img {
+  max-width: 200px;
+}
+
+.nav-image {
+  border: 1px;
+  border-radius: 30px;
+  max-height: 50px;
+}
+
+#search_form {
+  position: relative;
+  z-index: 100;
+}
+
+#search_form #search_results {
+  position: absolute;
+  left: 0;
+  top: 100%;
+  z-index: 100;
+}
+
+/**********
+* HOME PAGE *
+**********/
+.hero-banner {
+  background-image: url(images/food_plate@2x.png);
+  background-position: center;
+  background-repeat: none;
+  overflow: hidden;
+  background-size: cover;
+  padding: 120px;
+  min-height: 800px;
+}
+
+.accordion .card-header {
+  cursor: pointer;
+}
+
+.md-hr {
+  max-width: 400px;
+}
+
+.extramargin {
+  margin-top: 200px;
+  margin-bottom: 200px;
+}
+
+.extrapadding {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.grey-bg {
+  background-color: #F5F5F5;
+}
+
+.infoicons {
+  max-width: 250px;
+}
+
+/**********
+*  POSTS  *
+**********/
+.post-icons {
+  letter-spacing: 5px;
+  font-size: 15px;
+  color: #6a6a6a;
+}
+
+.feed-photo {
+  max-width: 100%;
+}
+
+/**********
+* COMMENTS *
+**********/
+.comment-loop {
+  max-height: 300px;
+  overflow-y: scroll;
+  -webkit-box-shadow: inset 1px 1px 3px rgba(0, 0, 0, 0.3);
+          box-shadow: inset 1px 1px 3px rgba(0, 0, 0, 0.3);
+  border-radius: 4px;
+  padding: 1em;
+  display: none;
+}
+
+.comment-loop .comment-username {
+  display: block;
+  opacity: 0.75;
+  font-size: 70%;
+}
+
+.comment-loop .my_comment {
+  text-align: right;
+  color: purple;
+}
+
+.project-meta {
+  padding-bottom: 1em;
+}
+
+.project-meta:after {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+/**********
+* FOOTER *
+**********/
+.footer {
+  background: #838383;
+  letter-spacing: 1px;
+  font-size: 14px;
+}
+
+.small-img {
+  max-height: 50px;
+}
+
+.icons {
+  letter-spacing: 5px;
+  font-size: 20px;
+  color: #505050;
+}
+
+.icons:hover {
+  color: black;
+}
+
+.sm-text {
+  font-size: 12px;
+}
+
+.blk-text {
+  color: black;
+}
+/*# sourceMappingURL=styles.css.map */
