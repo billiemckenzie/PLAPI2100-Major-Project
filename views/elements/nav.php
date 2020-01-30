@@ -24,8 +24,7 @@
                             </div>
                             <a class="nav-link dropdown-toggle addpointer" id="account-dropdown" data-toggle="dropdown">Welcome back <h6><?= $current_user['username'] ?></h6></a>
                             <div class="dropdown-menu text-right addpointer">
-                                <a class="dropdown-item" href="/users/">View your profile</a>
-                                <a class="dropdown-item" href="#">Add new Recipe</a>
+                                <a class="dropdown-item" href="/users/">View Profile</a>
                                 <a class="dropdown-item" href="/users/logout.php">Log Out</a>
                             </div>
                         </div>

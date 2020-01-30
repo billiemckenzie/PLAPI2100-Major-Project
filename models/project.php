@@ -51,13 +51,38 @@ class Project extends DB {
 
         $sql = "SELECT * FROM projects WHERE id = $id";
 
-        $project = $this->select($sql)[0];
+        $project = $this->select($sql)[0]; //[0] to select one project
 
         return $project;
 
     }
 
+    /*
+    * get_by_user_id()
+    * Get a project by the user ID
+    @ param $user_id
+    * @return array
+    */
 
+    public function get_by_user_id($user_id) {
+        $user_id = (int)$user_id; // check that value is an integer
+
+        $sql = "SELECT projects.*,
+                       users.firstname, users.lastname, users.username, loves.id AS love_id, 
+                       (SELECT COUNT(loves.id) FROM loves WHERE loves.project_id = projects.id) AS love_count
+                FROM projects
+                LEFT JOIN users
+                ON projects.user_id = users.id
+                LEFT JOIN loves
+                ON projects.id = loves.project_id AND loves.user_id = $user_id
+                WHERE projects.user_id = $user_id
+                ORDER BY projects.date_uploaded DESC";
+
+        $projects = $this->select($sql); // without the [0] selects all projects
+
+        return $projects;
+
+    }
 
     /*
     * add()

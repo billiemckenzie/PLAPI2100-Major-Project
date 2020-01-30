@@ -57,6 +57,20 @@ a {
 }
 
 /**********
+* BUTTONS *
+**********/
+.btn-secondary {
+  color: black;
+  font-size: 12px;
+  background-color: white;
+  border-color: #6c757d;
+  -webkit-box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+          box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 0;
+  border: 0.5px;
+}
+
+/**********
 * NAV BAR *
 **********/
 .logo-img {
@@ -79,6 +93,15 @@ a {
   left: 0;
   top: 100%;
   z-index: 100;
+}
+
+.ddmodalbtn.a:hover {
+  color: white;
+}
+
+.dropdown-item:hover {
+  background-color: #6c757d;
+  color: white;
 }
 
 /**********
@@ -191,7 +214,7 @@ a {
 }
 
 .sm-text {
-  font-size: 12px;
+  font-size: 10px;
 }
 
 .blk-text {

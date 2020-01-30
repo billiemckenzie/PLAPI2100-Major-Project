@@ -59,7 +59,7 @@ if (empty($_SESSION['user_logged_in'])) {
 
                     foreach ($projects as $project) {
                     ?>
-                        <div class="card mt-4 project-post" id="sharedProjectCard">
+                        <div class="card mt-4 ml-5 project-post" id="sharedProjectCard">
                             <div class="card-img">
                                 <img class="feed-photo" src="<?= $project['file_url'] ?> " class="img-fluid w-100">
                             </div>
@@ -115,7 +115,7 @@ if (empty($_SESSION['user_logged_in'])) {
                                 <p class="mt-3"><?= $project['description'] ?></p>
                                 <a href="/">See Full Recipe</a>
                                 <div class="mt-5">
-                                    <h6>Posted by: <a href="profile.php?user_id=<?= $project['user_id'] ?>"></a><?= $project['username'] ?>
+                                    <h6>Posted by: <a href="/users?id=<?= $project['user_id'] ?>"><?= $project['username'] ?></a></h6>
                                         <?php
                                         if ($project['user_id'] == $_SESSION['user_logged_in']) {
                                         ?>
@@ -136,7 +136,7 @@ if (empty($_SESSION['user_logged_in'])) {
                 </div>
 
             </div>
-            <div class="col-md-4 mt-4 text-right" id="searchArea">
+            <div class="col-md-4 mt-4 text-right mr-5" id="searchArea">
                 <!-- Button trigger modal -->
                 <button type="button" class="btn btn-secondary drillbtn" id="addnewrecipe" data-toggle="modal" data-target="#exampleModal">
                     + Add New Recipe
@@ -153,7 +153,7 @@ if (empty($_SESSION['user_logged_in'])) {
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Add New Recipe</h5>
+                <h4>Add New Recipe</h4>
                 <button type="button" class="close" data-dismiss="modal">
                     <span>&times;</span>
                 </button>
@@ -163,7 +163,6 @@ if (empty($_SESSION['user_logged_in'])) {
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-secondary">Submit</button>
             </div>
         </div>
     </div>
