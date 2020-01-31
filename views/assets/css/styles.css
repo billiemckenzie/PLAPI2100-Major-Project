@@ -146,6 +146,11 @@ a {
 /**********
 *  POSTS  *
 **********/
+.searchbar {
+  -webkit-box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+          box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
 .post-icons {
   letter-spacing: 5px;
   font-size: 15px;
@@ -154,6 +159,15 @@ a {
 
 .feed-photo {
   max-width: 100%;
+}
+
+.card {
+  -webkit-box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+          box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.main-photo {
+  max-width: 700px;
 }
 
 /**********

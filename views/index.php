@@ -23,7 +23,7 @@ if (empty($_SESSION['user_logged_in'])) {
 
     <div class="container mt-5">
         <div class="col-md-12">
-            
+
             <div class="input-group mb-5 mx-auto col-12">
                 <form class="form-inline col-md-8" id="search_form">
                     <input type="seach" autocomplete="off" name="search" id="search" class="form-control" placeholder="Search Recipes...">
@@ -113,7 +113,7 @@ if (empty($_SESSION['user_logged_in'])) {
 
                                 <p><small class="text-muted">Posted <?= date("M d, Y", strtotime($project['date_uploaded'])) ?></small></p>
                                 <p class="mt-3"><?= $project['description'] ?></p>
-                                <a href="/">See Full Recipe</a>
+                                <a href="/projects/index.php?id=<?= $project['id'] ?>">See Full Recipe</a>
                                 <div class="mt-5">
                                     <h6>Posted by: <a href="/users?id=<?= $project['user_id'] ?>"><?= $project['username'] ?></a></h6>
                                         <?php

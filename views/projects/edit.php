@@ -41,7 +41,10 @@ require_once("../elements/nav.php");
                             <input class="form-control" type="text" name="title" placeholder="Project Title" value="<?=$project['title']?>" required>
                         </div>
                         <div class="form-group mt-3">
-                            <textarea class="form-control" name="description" placeholder="Project Description" required><?=$project['description']?></textarea>
+                            <textarea class="form-control" name="description" placeholder="Project Description" rows="20" required><?=$project['description']?></textarea>
+                        </div>
+                        <div class="form-group mt-3">
+                            <textarea class="form-control" name="full_recipe" placeholder="Full Recipe" rows="50" required><?=$project['full_recipe']?></textarea>
                         </div>
                         <div class="form-group text-right">
                             <button type="submit" class="btn btn-secondary">Submit Changes</button>

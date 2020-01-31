@@ -71,6 +71,8 @@ class DB {
         // Store the XSS cleaned data
         // XSS = Cross Site Scripting Attack
         $xssArr = array();
+       
+
         if($result->num_rows > 0){
             $x = 0;
             while( $row = $result->fetch_assoc()) {
@@ -81,7 +83,7 @@ class DB {
                 $x++;
             }
         } else {
-            if(APP_DEBUG) $_SESSION['errors'][] = "Error selecting from database: $sql";
+            $_SESSION['errors'][] = "Error selecting from database: $sql";
         }
 
         $conn->close();

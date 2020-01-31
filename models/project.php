@@ -48,11 +48,15 @@ class Project extends DB {
 
     public function get_by_id($id) {
         $id = (int)$id; // check that value is an integer
-
-        $sql = "SELECT * FROM projects WHERE id = $id";
+        
+        $sql = "SELECT  projects.*, 
+                        users.firstname, users.lastname, users.username 
+                FROM projects
+                LEFT JOIN users
+                ON projects.user_id = users.id
+                WHERE projects.id = $id";
 
         $project = $this->select($sql)[0]; //[0] to select one project
-
         return $project;
 
     }
