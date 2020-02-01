@@ -6,6 +6,7 @@
             <h5>Sign up today to start browsing recipes from world class chefs, and self-proclaimed home chef elites!</h5>
         </div>
 
+        
         <!--Accordion Start-->
         <div class="accordion col-md-4" id="signupAccordion">
 
