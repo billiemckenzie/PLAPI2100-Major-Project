@@ -1,5 +1,5 @@
 <div class="hero-banner">
-    <div class="row">
+    <div class="row d-flex justify-content-center">
         <div class="col-md-4 text-right mt-5 mr-5">
             <h1 class="text-right">A Community for Chefs and Food Lovers</h1>
             <hr class="md-hr pt-5 mt-5">
@@ -73,16 +73,16 @@
 
 <div class="extramargin grey-bg">
     <div class="container extrapadding">
-        <div class="row">
-            <div class="col-md-3 mx-auto text-center">
+        <div class="row d-flex justify-content-around">
+            <div class="col-md-3 text-center">
                 <img class="infoicons" src="/images/chefhatx2.png">
                 <h3 class="pt-4">CREATE</h3>
             </div>
-            <div class="col-md-3 mx-auto text-center">
+            <div class="col-md-3 text-center">
                 <img class="infoicons" src="/images/chefplatex2.png">
                 <h3 class="pt-4">SHARE</h3>
             </div>
-            <div class="col-md-3 mx-auto text-center">
+            <div class="col-md-3 text-center">
                 <img class="infoicons" src="/images/forksknivesx2.png">
                 <h3 class="pt-4">EAT!</h3>
             </div>

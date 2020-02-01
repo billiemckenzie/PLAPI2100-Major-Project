@@ -50,7 +50,7 @@ class Project extends DB {
         $id = (int)$id; // check that value is an integer
         
         $sql = "SELECT  projects.*, 
-                        users.firstname, users.lastname, users.username 
+                        users.firstname, users.lastname, users.username, users.profile_pic
                 FROM projects
                 LEFT JOIN users
                 ON projects.user_id = users.id

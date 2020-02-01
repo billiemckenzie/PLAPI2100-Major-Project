@@ -204,7 +204,12 @@ $(document).ready(function(){
                     
                     var output = "<div class='list-group'>";
                     $.each(search_results, function(i, search_result){
-                        output += "<a class='list-group-item' href='/projects?id="+search_result.id+"'>" + search_result.title + "</a>";
+                        if(search_result.user_id){
+                            output += "<a class='list-group-item' href='/projects?id="+search_result.id+"'>" + search_result.title + "</a>";
+                        }else{
+                            output += "<a class='list-group-item' href='/users?id="+search_result.id+"'>" + search_result.username + "</a>";
+                        }
+
                     });
                     output += "</div>";
                     $("#search_results").html(output);

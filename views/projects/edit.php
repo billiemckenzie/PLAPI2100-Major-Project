@@ -8,7 +8,7 @@ if (!empty($_GET['id'])) {
 
     if( !empty($_POST)){
         $p_model->edit($_GET['id']);
-        header('Location: /');
+        header('Location: /projects/index.php?id='.(int)$_GET['id']);
         exit;
     }
 
