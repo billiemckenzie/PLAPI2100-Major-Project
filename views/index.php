@@ -103,6 +103,8 @@ if (empty($_SESSION['user_logged_in'])) {
                                         </div>
                                     <?php
                                     }
+
+
                                     ?>
 
                                 </div> <!-- End of comment-loop -->

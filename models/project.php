@@ -97,6 +97,7 @@ class Project extends DB {
     public function add() {
 
         $title = $this->data['title'];
+        $full_recipe = $this->data['full_recipe'];
         $description = $this->data['description'];
         $user_id = (int)$_SESSION['user_logged_in'];
         $current_time = date("Y-m-d H:i:s", time());
@@ -109,8 +110,8 @@ class Project extends DB {
         $filename = $file_upload['filename'];
 
         if( $file_upload['file_upload_error_status'] == 0){
-            $sql = "INSERT INTO projects (title, description, date_uploaded, user_id, file_url) 
-                    VALUES ('$title', '$description', '$current_time', $user_id, '$filename')";
+            $sql = "INSERT INTO projects (title, description, date_uploaded, user_id, file_url, full_recipe) 
+                    VALUES ('$title', '$description', '$current_time', $user_id, '$filename', '$full_recipe')";
 
             $this->execute($sql);
         }
@@ -129,6 +130,7 @@ class Project extends DB {
 
         // Process form data and update database
         $title = $this->data['title'];
+        $full_recipe = $this->data['full_recipe'];
         $description = $this->data['description'];
         $current_user_id = (int)$_SESSION['user_logged_in'];
 
@@ -153,7 +155,7 @@ class Project extends DB {
            
             if( $file_upload['file_upload_error_status'] == 0 ){
                 $sql = "UPDATE projects 
-                        SET title = '$title', description = '$description', file_url = '$filename'
+                        SET title = '$title', description = '$description', file_url = '$filename', full_recipe = '$full_recipe'
                         WHERE id = $project_id AND user_id = $current_user_id ";
                         
                 $this->execute($sql);
@@ -163,7 +165,7 @@ class Project extends DB {
 
         } else { // If no new image, just new text
             $sql = "UPDATE projects 
-                    SET title = '$title', description = '$description'
+                    SET title = '$title', description = '$description', full_recipe = '$full_recipe'
                     WHERE id = $project_id AND user_id = $current_user_id ";
 
             $this->execute($sql);
