@@ -39,12 +39,12 @@ if (empty($_SESSION['user_logged_in'])) {
 
             <?php
             // Check for alerts
-            if (!empty($_SESSION['errors']) && is_array($_SESSION['errors'])) {
-                foreach ($_SESSION['errors'] as $error) {
-                    echo "<div class='alert alert-danger'>$error</div>";
-                }
-                unset($_SESSION['errors']);
-            }
+            //if (!empty($_SESSION['errors']) && is_array($_SESSION['errors'])) {
+                //foreach ($_SESSION['errors'] as $error) {
+                    //echo "<div class='alert alert-danger'>$error</div>";
+                //}
+                //unset($_SESSION['errors']);
+            //}
 
             ?>
         </div>
